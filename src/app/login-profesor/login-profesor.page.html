@@ -1,13 +1,39 @@
-<ion-header [translucent]="true">
+
+<ion-header [translucent]="true" class="ion-text-center">
   <ion-toolbar>
-    <ion-title>loginProfesor</ion-title>
+    <ion-title size="large">SkeletonAPP</ion-title>
+
+    <ion-list>  
+      <ion-item>
+        <ion-input
+          label="Usuario"
+          labelPlacement="stacked"
+          [clearOnEdit]="true"
+          placeholder="Ingresa un usuario valido"
+        >
+        </ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input
+          label="Contraseña"
+          labelPlacement="stacked"
+          type="password"
+          placeholder="Ingresa contraseña"
+        >
+        </ion-input>
+      </ion-item>
+
+      <link rel="stylesheet" href=""><ion-button color="success">Ingresar</ion-button>
+
+      <ion-text color ="primary" class="ion-margin-top">
+        <h6>Crea tu cuenta gratis</h6>
+      </ion-text>
+    </ion-list>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">loginProfesor</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+
+
+
