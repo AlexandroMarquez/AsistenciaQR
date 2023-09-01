@@ -1,0 +1,66 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar color="light">
+    <ion-title>SkeletonApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-title size="large"  class="ion-text-center ion-padding">Bienvenido</ion-title>
+
+  <ion-text class="usuario">
+    <p>Usuario: Matías</p>
+  </ion-text>
+
+  <ion-text class="ion-text-center ">
+    <h3>Información adicional</h3>
+  </ion-text>
+
+  <ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-input label="Nombre:" placeholder="Ingresa tu nombre"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input label="Apellido:" type="text" placeholder="Ingresa tu apellido"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-select justify="start" label="Nivel educacional: " placeholder="Ingresa tu nivel educativo">
+          <ion-select-option value="Básica-completa">Básica-completa</ion-select-option>
+          <ion-select-option value="Básica-incompleta">Básica-incompleta</ion-select-option>
+          <ion-select-option value="Media-completa">Media-completa</ion-select-option>
+          <ion-select-option value="Media-incompleta">Media-incompleta</ion-select-option>
+          <ion-select-option value="Superior-completa">Superior-completa</ion-select-option>
+          <ion-select-option value="Superior-incompleta">Superior-incompleta</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input label="Fecha de nacimineto:"></ion-input>
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime id="datetime"></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </ion-item>
+  
+    </ion-list>
+  </ion-list>
+
+  <ion-button color="success">Mostrar</ion-button>
+  <ion-button color="danger">Limpiar</ion-button>
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-title>App desarrollada por: Matías Oliva</ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+
+
+

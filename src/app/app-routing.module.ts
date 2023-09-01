@@ -26,6 +26,14 @@ const routes: Routes = [
     path: 'main-student',
     loadChildren: () => import('./main-student/main-student.module').then( m => m.MainStudentPageModule)
   },
+  {
+    path: 'registro-profesor',
+    loadChildren: () => import('./registro-profesor/registro-profesor.module').then( m => m.RegistroProfesorPageModule)
+  },
+  {
+    path: 'registro-estudiante',
+    loadChildren: () => import('./registro-estudiante/registro-estudiante.module').then( m => m.RegistroEstudiantePageModule)
+  },
 
 ];
 

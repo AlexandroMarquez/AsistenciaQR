@@ -1,0 +1,77 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar color="light">
+    <ion-title>NombreApp</ion-title>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-title size="large"  class="ion-text-center ion-padding">Bienvenido</ion-title>
+
+  <ion-text class="ion-text-center ">
+    <h3>Registro Estudiante</h3>
+  </ion-text>
+
+  <ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-input label="Nombre:" placeholder="Ingresa tu nombre"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input label="Apellido:" type="text" placeholder="Ingresa tu apellido"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Rut:" type="text" placeholder="Ingresa tu rut"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Telefono de contacto:" type="text" placeholder="Ingresa tu telefono de contacto"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Correo electronico:" type="text" placeholder="Ingresa tu correo electronico"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-select justify="start" label="Selecciona tu sede: " placeholder="Ingresa tu sede">
+          <ion-select-option value="San Joaquin">San Joaquin</ion-select-option>
+          <ion-select-option value="Alonzo de Ovalle">Alonzo de Ovalle</ion-select-option>
+          <ion-select-option value="Plaza vespucio">Plaza vespucio</ion-select-option>
+          <ion-select-option value="Maipú">Maipú</ion-select-option>
+          <ion-select-option value="Antonio Varas">Antonio Varas</ion-select-option>
+          <ion-select-option value="Melipilla">Melipilla</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input label="Fecha de nacimineto:"></ion-input>
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime id="datetime"></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </ion-item>
+  
+    </ion-list>
+  </ion-list>
+
+  <ion-button color="success">Mostrar</ion-button>
+  <ion-button color="danger">Limpiar</ion-button>
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-title>App desarrollada por: Matías Oliva</ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+
+
+
+
