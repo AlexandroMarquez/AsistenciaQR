@@ -34,6 +34,14 @@ const routes: Routes = [
     path: 'registro-estudiante',
     loadChildren: () => import('./registro-estudiante/registro-estudiante.module').then( m => m.RegistroEstudiantePageModule)
   },
+  {
+    path: 'recuperar-cuenta-estudiante',
+    loadChildren: () => import('./recuperar-cuenta-estudiante/recuperar-cuenta-estudiante.module').then( m => m.RecuperarCuentaEstudiantePageModule)
+  },
+  {
+    path: 'recuperar-cuenta-profesor',
+    loadChildren: () => import('./recuperar-cuenta-profesor/recuperar-cuenta-profesor.module').then( m => m.RecuperarCuentaProfesorPageModule)
+  },
 
 ];
 

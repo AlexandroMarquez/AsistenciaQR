@@ -1,36 +1,20 @@
-
 <ion-header [translucent]="true" class="ion-text-center">
   <ion-toolbar>
-    <ion-title size="large">Bienvenido Profesor</ion-title>
+    <ion-title size="large">Bienvenido NombreAlumnno</ion-title>
 
     <ion-list>  
       <ion-item>
         <ion-input
-          label="Usuario"
+          label="Ingresa tu correo"
           labelPlacement="stacked"
           [clearOnEdit]="true"
-          placeholder="Ingresa un usuario valido"
-        >
-        </ion-input>
-      </ion-item>
-    
-      <ion-item>
-        <ion-input
-          label="Contraseña"
-          labelPlacement="stacked"
-          type="password"
-          placeholder="Ingresa contraseña"
+          placeholder="Ingresa correo asociado a tu cuenta"
         >
         </ion-input>
       </ion-item>
 
-      <ion-button color="success" routerLink="/main-profesor">Ingresar</ion-button>
-
-      <ion-text color ="primary" class="ion-margin-top">
-        <h6 routerLink="/recuperar-cuenta-profesor">Recupera tu cuenta</h6>
-      </ion-text>
+      <link rel="stylesheet" routerLink="/main-student"><ion-button color="success">Ingresar</ion-button>
     </ion-list>
-    
   </ion-toolbar>
 </ion-header>
 <ion-footer>
@@ -44,7 +28,3 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
-
-
-
-
