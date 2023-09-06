@@ -1,22 +1,28 @@
+<!-- HEADER -->
 <ion-header [translucent]="true" class="ion-text-center">
   <ion-toolbar>
-    <ion-title size="large">Bienvenido NombreAlumnno</ion-title>
-
-    <ion-list>  
-      <ion-item>
-        <ion-input
-          label="Ingresa tu correo"
-          labelPlacement="stacked"
-          [clearOnEdit]="true"
-          placeholder="Ingresa correo asociado a tu cuenta"
-        >
-        </ion-input>
-      </ion-item>
-
-      <link rel="stylesheet" routerLink="/main-student"><ion-button color="success">Ingresar</ion-button>
-    </ion-list>
+    <ion-title size="large">Bienvenido Alumnno</ion-title>  
   </ion-toolbar>
 </ion-header>
+
+<!-- BODY -->
+<ion-content>
+  <ion-list>  
+    <ion-item>
+      <ion-input
+        label="Ingresa tu correo"
+        labelPlacement="stacked"
+        [clearOnEdit]="true"
+        placeholder="Ingresa correo asociado a tu cuenta"
+      >
+      </ion-input>
+    </ion-item>
+
+    <link rel="stylesheet" routerLink="/main-student"><ion-button color="success">Ingresar</ion-button>
+  </ion-list>
+</ion-content>
+
+<!-- FOOTER -->
 <ion-footer>
   <ion-toolbar>
     <ion-buttons slot="start">
