@@ -8,8 +8,10 @@
 
 <!-- BODY -->
 <ion-list>  
+  <form [formGroup]="formularioLoginStudent">
   <ion-item>
     <ion-input
+      formControlName="nombre"
       label="Usuario"
       labelPlacement="stacked"
       [clearOnEdit]="true"
@@ -19,7 +21,8 @@
   </ion-item>
 
   <ion-item>
-    <ion-input
+    <ion-input      
+      formControlName="contraseña"
       label="Contraseña"
       labelPlacement="stacked"
       type="password"
@@ -33,6 +36,7 @@
   <ion-text color ="primary" class="ion-margin-top">
     <h6 routerLink="/recuperar-cuenta-estudiante">Recupera tu cuenta</h6>
   </ion-text>
+</form>
 </ion-list>
 
 
