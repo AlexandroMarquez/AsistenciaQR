@@ -1,28 +1,28 @@
-<ion-header [translucent]="true" >
-  <ion-toolbar color="light">
+<ion-header [translucent]="true" color="warning">
+  <ion-toolbar color="warning">
     <ion-title>NombreApp</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" >
+<ion-content [fullscreen]="true" color="dark">
   <ion-title size="large"  class="ion-text-center ion-padding">Bienvenido</ion-title>
 
 
-  <ion-text class="ion-text-center ">
+  <ion-text class="ion-text-center" color="dark">
     <h3>Registro Profesor</h3>
   </ion-text>
 
-  <ion-list>
-    <ion-list>
-      <ion-item>
+  <ion-list color="dark">
+    <ion-list color="dark">
+      <ion-item color="dark">
         <ion-input label="Nombre:" placeholder="Ingresa tu nombre"></ion-input>
       </ion-item>
   
-      <ion-item>
+      <ion-item color="dark">
         <ion-input label="Apellido:" type="text" placeholder="Ingresa tu apellido"></ion-input>
       </ion-item>
 
-      <ion-item>
+      <ion-item color="dark">
         <ion-input label="Fecha de nacimineto:"></ion-input>
         <ion-datetime-button datetime="datetime"></ion-datetime-button>
 
@@ -34,7 +34,7 @@
       </ion-item>
 
 
-      <ion-item>
+      <ion-item color="dark">
         <ion-select justify="start" label="Selecciona asignatura a impartir: " placeholder="Selecciona asignatura a impartir:">
           <ion-select-option value="San Joaquin">Desarrollo de aplicaciones  moviles</ion-select-option>
           <ion-select-option value="Alonzo de Ovalle">Desarrollo de aplicacciones web</ion-select-option>
@@ -45,7 +45,7 @@
         </ion-select>
       </ion-item>
   
-      <ion-item>
+      <ion-item color="dark">
         <ion-select justify="start" label="Selecciona tu sede: " placeholder="Ingresa tu sede">
           <ion-select-option value="San Joaquin">San Joaquin</ion-select-option>
           <ion-select-option value="Alonzo de Ovalle">Alonzo de Ovalle</ion-select-option>
@@ -64,9 +64,9 @@
   
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar color="light">
-    <ion-title>App desarrollada por: Matías Oliva</ion-title>
+<ion-footer color="warning">
+  <ion-toolbar color="warning">
+    <ion-title>App desarrollada por: Equipo DUOC</ion-title>
   </ion-toolbar>
 </ion-footer>
 

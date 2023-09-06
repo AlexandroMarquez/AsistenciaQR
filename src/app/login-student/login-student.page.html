@@ -1,44 +1,46 @@
 
 <!-- HEADER -->
  <ion-header [translucent]="true" class="ion-text-center"> 
-  <ion-toolbar>
+  <ion-toolbar color="warning">
     <ion-title size="large">Bienvenido Alumnno</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <!-- BODY -->
-<ion-list>  
-  <ion-item>
-    <ion-input
-      label="Usuario"
-      labelPlacement="stacked"
-      [clearOnEdit]="true"
-      placeholder="Ingresa un usuario valido"
-    >
-    </ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-input
-      label="Contraseña"
-      labelPlacement="stacked"
-      type="password"
-      placeholder="Ingresa contraseña"
-    >
-    </ion-input>
-  </ion-item>
-
-  <link rel="stylesheet" routerLink="/main-student"><ion-button color="success">Ingresar</ion-button>
-
-  <ion-text color ="primary" class="ion-margin-top">
-    <h6 routerLink="/recuperar-cuenta-estudiante">Recupera tu cuenta</h6>
-  </ion-text>
-</ion-list>
+<ion-content color="dark">
+  <ion-list color="dark">  
+    <ion-item color="dark">
+      <ion-input
+        label="Usuario"
+        labelPlacement="stacked"
+        [clearOnEdit]="true"
+        placeholder="Ingresa un usuario valido"
+      >
+      </ion-input>
+    </ion-item>
+  
+    <ion-item color="dark">
+      <ion-input
+        label="Contraseña"
+        labelPlacement="stacked"
+        type="password"
+        placeholder="Ingresa contraseña"
+      >
+      </ion-input>
+    </ion-item>
+  
+    <link rel="stylesheet" routerLink="/main-student"><ion-button color="success">Ingresar</ion-button>
+  
+    <ion-text color ="primary" class="ion-margin-top">
+      <h6 routerLink="/recuperar-cuenta-estudiante">Recupera tu cuenta</h6>
+    </ion-text>
+  </ion-list>
+</ion-content>
 
 
 <!-- FOOTER -->
 <ion-footer>
-  <ion-toolbar color="light">
+  <ion-toolbar color="warning">
     <ion-buttons slot="start">
       <ion-button color ="primary" routerLink="/home">Back</ion-button>
     </ion-buttons>

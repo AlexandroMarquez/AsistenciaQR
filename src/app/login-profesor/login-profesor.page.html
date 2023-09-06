@@ -1,15 +1,16 @@
 <!-- Header -->
 <ion-header [translucent]="true" class="ion-text-center">
-  <ion-toolbar>
+  <ion-toolbar color="warning">
     <ion-title size="large">Bienvenido Profesor</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <!-- Body -->
-<ion-content>
+<ion-content color="dark">
 
-  <ion-list>  
-    <ion-item>
+  <ion-list color="dark"> 
+
+    <ion-item color="dark">
       <ion-input
         label="Usuario"
         labelPlacement="stacked"
@@ -19,7 +20,7 @@
       </ion-input>
     </ion-item>
   
-    <ion-item>
+    <ion-item color="dark">
       <ion-input
         label="Contraseña"
         labelPlacement="stacked"
@@ -31,7 +32,7 @@
 
     <ion-button color="success" routerLink="/main-profesor">Ingresar</ion-button>
 
-    <ion-text color ="primary" class="ion-margin-top">
+    <ion-text color ="primary" class="ion-margin-top dark">
       <h6 routerLink="/recuperar-cuenta-profesor">Recupera tu cuenta</h6>
     </ion-text>
   </ion-list>
@@ -39,8 +40,8 @@
 </ion-content>
 
 <!-- Footer -->
-<ion-footer color="light">
-  <ion-toolbar>
+<ion-footer color="warning">
+  <ion-toolbar color="warning">
     <ion-buttons slot="start">
       <ion-button color ="primary" routerLink="/home">Back</ion-button>
     </ion-buttons>

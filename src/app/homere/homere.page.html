@@ -1,6 +1,6 @@
 <!-- HEADER -->
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="warning">
     <ion-title>
       EasyCheck
     </ion-title>
@@ -8,20 +8,20 @@
 </ion-header>
 
 <!-- BODY -->
-<ion-content [fullscreen]="true">
-    <ion-toolbar>
+<ion-content [fullscreen]="true" color="dark" class="ion-text-center">
+    <ion-toolbar color="dark">
       <ion-title size="large">Registrate a nuestra APP</ion-title>
     </ion-toolbar>
 </ion-content>
 
-<div>
+<div color="dark">
   <ion-button expand="block" routerLink="/login-student">Estudiante</ion-button> 
   <ion-button expand="block"  routerLink="/login-profesor">Profesor</ion-button>
 </div>
 
 <!-- FOOTER -->
 <ion-footer>
-  <ion-toolbar color="light">
-    <ion-title>App desarrollada por: Matías Oliva</ion-title>
+  <ion-toolbar color="warning">
+    <ion-title>App desarrollada por: Equipo DUOC</ion-title>
   </ion-toolbar>
-</ion-footer>>
+</ion-footer>

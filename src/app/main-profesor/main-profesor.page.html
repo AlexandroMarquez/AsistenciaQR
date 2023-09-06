@@ -1,24 +1,20 @@
 <!-- HEADER -->
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header [translucent]="true" color="warning">
+  <ion-toolbar color="warning">
     <ion-title>Bienvenidos a clases</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <!-- BODY -->
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Bienvenidos a Clases</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-card style="display: flex; flex-direction: column; align-items: center;">
+<ion-content [fullscreen]="true" color="dark">
+  
+  <ion-card style="display: flex; flex-direction: column; align-items: center;" color="dark">
     <img src="assets/img/qrImage.jpg" alt="QR Image Asistencia" style="max-width: 50%; height: auto;"/>
     <ion-card-header>
       <ion-card-subtitle>Escanea el QR para registrar tu asistencia</ion-card-subtitle>
     </ion-card-header>
   
-    <ion-card-content style="display: flex; flex-direction: column; align-items: center;">
+    <ion-card-content style="display: flex; flex-direction: column; align-items: center;" color="dark">
       <p>Asignatura: Programacion de Aplicaciones Móviles<p>
       <ion-grid>
         <ion-row>
@@ -32,7 +28,7 @@
           <ion-col size-md="10">Joaquin Vicente Nuñez Peralta </ion-col>
           <ion-col size-md="10">20.356.987-k</ion-col>
           <ion-col size-md="4">
-              <ion-item>
+              <ion-item color="dark">
                 <ion-checkbox slot="start"></ion-checkbox>
               </ion-item>
           </ion-col>
@@ -43,7 +39,7 @@
           <ion-col size-md="10">Josefina del Pilar Ramirez Obregon</ion-col>
           <ion-col size-md="10">18.623.597-9</ion-col>
           <ion-col size-md="4">
-            <ion-item>
+            <ion-item color="dark">
               <ion-checkbox slot="start"></ion-checkbox>
             </ion-item>
         </ion-col>
@@ -54,7 +50,7 @@
           <ion-col size-md="10">Pablo Ariel Santana Araya</ion-col>
           <ion-col size-md="10">20.568.762-k</ion-col>
           <ion-col size-md="4">
-            <ion-item>
+            <ion-item color="dark">
               <ion-checkbox slot="start"></ion-checkbox>
             </ion-item>
         </ion-col>
@@ -65,7 +61,7 @@
           <ion-col size-md="10">Miguel Andrés Lillo Guzman</ion-col>
           <ion-col size-md="10">19.369.953-2</ion-col>
           <ion-col size-md="4">
-            <ion-item>
+            <ion-item color="dark">
               <ion-checkbox slot="start"></ion-checkbox>
             </ion-item>
         </ion-col>
@@ -77,8 +73,8 @@
 
 
 <!-- FOOTER -->
-<ion-footer>
-  <ion-toolbar color="light">
+<ion-footer color="warning">
+  <ion-toolbar color="warning">
     <ion-buttons slot="start">
       <ion-button color ="primary" routerLink="/login-profesor">Back</ion-button>
     </ion-buttons>
