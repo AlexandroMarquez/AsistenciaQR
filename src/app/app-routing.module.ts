@@ -42,6 +42,14 @@ const routes: Routes = [
     path: 'recuperar-cuenta-profesor',
     loadChildren: () => import('./recuperar-cuenta-profesor/recuperar-cuenta-profesor.module').then( m => m.RecuperarCuentaProfesorPageModule)
   },
+  {
+    path: 'home2',
+    loadChildren: () => import('./home2/home2.module').then( m => m.Home2PageModule)
+  },
+  {
+    path: 'homere',
+    loadChildren: () => import('./homere/homere.module').then( m => m.HomerePageModule)
+  },
 
 ];
 
