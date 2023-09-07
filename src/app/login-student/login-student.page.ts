@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import {
   FormGroup,
   FormControl,
@@ -13,29 +13,40 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./login-student.page.scss'],
 })
 export class LoginStudentPage implements OnInit {
+  @ViewChild('inputUsuario') inputUsuario!: ElementRef;
+  @ViewChild('inputContraseña') inputContraseña!: ElementRef;
 
-  formularioLoginStudent: FormGroup;
+  
 
-  constructor(public fb: FormBuilder, 
-    public alertController: AlertController) { 
+  formularioLoginStudent: FormGroup = new FormGroup({
+    'user': new FormControl(this.inputUsuario, Validators.required),
+    'password': new FormControl(this.inputContraseña, Validators.required)
+  });
 
-    this.formularioLoginStudent = this.fb.group({
-      'nombre': new FormControl("", Validators.required),
-      'password' : new FormControl("", Validators.required)
-    })
-
-  }
+  constructor(public fb: FormBuilder, public alertController: AlertController) { }
 
   ngOnInit() {
+    
+   }
+
+  ngAfterViewInit() {
+    const inputUsuarioValue = this.inputUsuario.nativeElement.value;
+    const inputContraseñaValue = this.inputContraseña.nativeElement.value;
+
+    this.formularioLoginStudent.setValue({
+      'user': inputUsuarioValue,
+      'password': inputContraseñaValue
+    });
   }
 
-  async Ingresar() {
-    var f = this.formularioLoginStudent.value;
-    var usuario = JSON.parse(localStorage.getItem('usuario') || 'null');
+  async ingresar() {
+    var varFormularioLogin = this.formularioLoginStudent.value;
+    var user = JSON.parse(localStorage.getItem('usuario') || '{}');
+    console.log(varFormularioLogin.user);//imprime lo siguiente: {user: '', password: ''}
+    console.log(user.usuario);//accede sin problemas
 
-    if (usuario && usuario.nombre == f.nombre && usuario.password == f.password) {
+    if (user.usuario === varFormularioLogin.user && user.contraseña === varFormularioLogin.password) {
       console.log("Ingresado");
-      // Aquí puedes redirigir al usuario a la página de inicio o realizar cualquier otra acción necesaria.
     } else {
       const alert = await this.alertController.create({
         header: 'Datos Incorrectos',
@@ -44,6 +55,5 @@ export class LoginStudentPage implements OnInit {
       });
       await alert.present();
     }
-}
-
+  }
 }
