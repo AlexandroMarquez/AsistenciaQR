@@ -1,12 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { Router } from '@angular/router'; // Asegúrate de importar el servicio Router
-
-import {
-  FormGroup,
-  FormControl,
-  Validators,
-  FormBuilder
-} from '@angular/forms';
+import { Router } from '@angular/router';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -18,28 +12,33 @@ export class LoginProfesorPage implements OnInit {
   @ViewChild('inputUsuario') inputUsuario!: ElementRef;
   @ViewChild('inputContraseña') inputContraseña!: ElementRef;
 
-  formularioLoginProfesor: FormGroup = new FormGroup({
-    'user': new FormControl(this.inputUsuario, Validators.required),
-    'password': new FormControl(this.inputContraseña, Validators.required)
-  });
+  formularioLoginProfesor: FormGroup;
 
   constructor(
     public fb: FormBuilder,
     public alertController: AlertController,
     private router: Router 
-  ) { }
+  ) {
+    this.formularioLoginProfesor = this.fb.group({
+      'user': new FormControl('', Validators.required),
+      'password': new FormControl('', Validators.required)
+    });
+  }
 
   ngOnInit() {
     
   }
 
   ngAfterViewInit() {
-    const inputUsuarioValue = this.inputUsuario.nativeElement.value;
-    const inputContraseñaValue = this.inputContraseña.nativeElement.value;
+    // Escuchar los cambios en los controles del formulario
+    this.formularioLoginProfesor.get('user')?.valueChanges.subscribe(userValue => {
+      // Realizar acciones cuando cambie el valor de 'user'
+      // Puedes acceder a 'userValue' aquí
+    });
 
-    this.formularioLoginProfesor.setValue({
-      'user': inputUsuarioValue,
-      'password': inputContraseñaValue
+    this.formularioLoginProfesor.get('password')?.valueChanges.subscribe(passwordValue => {
+      // Realizar acciones cuando cambie el valor de 'password'
+      // Puedes acceder a 'passwordValue' aquí
     });
   }
 
@@ -62,4 +61,3 @@ export class LoginProfesorPage implements OnInit {
     }
   }
 }
-

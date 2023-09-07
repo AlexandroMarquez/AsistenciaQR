@@ -5,11 +5,12 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- BODY -->
+<!-- BODY --> 
 <ion-content color="dark">
-  <ion-list color="dark">  
+  <form [formGroup]="formularioRecuperarCuenta" color="dark">  
     <ion-item color="dark">
-      <ion-input
+      <ion-input        
+        formControlName="mail"
         label="Ingresa tu correo"
         labelPlacement="stacked"
         [clearOnEdit]="true"
@@ -19,8 +20,8 @@
       </ion-input>
     </ion-item>
 
-    <link rel="stylesheet" routerLink="/main-student" color="dark"><ion-button color="success">Ingresar</ion-button>
-  </ion-list>
+    <link rel="stylesheet" color="dark"><ion-button color="success">Ingresar</ion-button>
+  </form>
 </ion-content>
 
 <!-- FOOTER -->
