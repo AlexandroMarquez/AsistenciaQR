@@ -1,47 +1,49 @@
-<!-- Header -->
-<ion-header [translucent]="true" class="ion-text-center">
-  <ion-toolbar color="warning">
+
+<!-- HEADER -->
+<ion-header [translucent]="true" class="ion-text-center"> 
+  <ion-toolbar>
     <ion-title size="large">Bienvenido Profesor</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<!-- Body -->
-<ion-content color="dark">
+<!-- BODY -->
 
-  <ion-list color="dark"> 
+<form [formGroup]="formularioLoginProfesor" color="dark">  
+  <ion-item>
+    <ion-input
+      id="inputUsuario"
+      formControlName="user"
+      label="Usuario"
+      labelPlacement="stacked"
+      [clearOnEdit]="true"
+      placeholder="Ingresa un usuario valido"
+    >
+    </ion-input>
+  </ion-item>
 
-    <ion-item color="dark">
-      <ion-input
-        label="Usuario"
-        labelPlacement="stacked"
-        [clearOnEdit]="true"
-        placeholder="Ingresa un usuario valido"
-      >
-      </ion-input>
-    </ion-item>
-  
-    <ion-item color="dark">
-      <ion-input
-        label="Contraseña"
-        labelPlacement="stacked"
-        type="password"
-        placeholder="Ingresa contraseña"
-      >
-      </ion-input>
-    </ion-item>
+  <ion-item>
+    <ion-input
+      id="inputContraseña"
+      formControlName="password"
+      label="Contraseña"
+      labelPlacement="stacked"
+      type="password"
+      placeholder="Ingresa contraseña"
+    >
+    </ion-input>
+  </ion-item>
 
-    <ion-button color="success" routerLink="/main-profesor">Ingresar</ion-button>
+  <link rel="stylesheet" routerLink="/main-profesor"><ion-button (click)="ingresar()" color="success">Ingresar</ion-button>
 
-    <ion-text color ="primary" class="ion-margin-top dark">
-      <h6 routerLink="/recuperar-cuenta-profesor">Recupera tu cuenta</h6>
-    </ion-text>
-  </ion-list>
+  <ion-text color ="primary" class="ion-margin-top">
+    <h6 routerLink="/recuperar-cuenta-profesor">Recupera tu cuenta</h6>
+  </ion-text>
+</form>
 
-</ion-content>
 
-<!-- Footer -->
-<ion-footer color="warning">
-  <ion-toolbar color="warning">
+<!-- FOOTER -->
+<ion-footer>
+  <ion-toolbar color="light">
     <ion-buttons slot="start">
       <ion-button color ="primary" routerLink="/home">Back</ion-button>
     </ion-buttons>
@@ -51,7 +53,5 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
-
-
 
 

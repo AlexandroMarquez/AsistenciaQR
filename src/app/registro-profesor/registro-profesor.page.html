@@ -1,74 +1,72 @@
-<ion-header [translucent]="true" color="warning">
+<ion-header [translucent]="true" color="warning" >
   <ion-toolbar color="warning">
-    <ion-title>NombreApp</ion-title>
+    <ion-title>EasyCheck</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="dark">
-  <ion-title size="large"  class="ion-text-center ion-padding">Bienvenido</ion-title>
+<form [formGroup]="formularioRegistroProfesor" color="dark">
+
+  <ion-item>
+       <ion-input formControlName="usuario" label="Usuario:" placeholder="Ingresa el nombre de usuario que deseas utilizar"></ion-input>
+     </ion-item>
+
+     <ion-item>
+       <ion-input formControlName="contraseña" label="Contraseña:" placeholder="Ingresa tu contraseña" type="password"></ion-input>
+     </ion-item>
+
+     <ion-item>
+       <ion-input formControlName="nombre" label="Nombre:" placeholder="Ingresa tu nombre"></ion-input>
+     </ion-item>
+ 
+     <ion-item>
+       <ion-input formControlName="apellido" label="Apellido:" type="text" placeholder="Ingresa tu apellido"></ion-input>
+     </ion-item>
+
+     <ion-item>
+       <ion-input formControlName="rut" label="Rut:" type="text" placeholder="Ingresa tu rut"></ion-input>
+     </ion-item>
+
+     <ion-item>
+       <ion-input formControlName="telefono" label="Telefono de contacto:" type="text" placeholder="Ingresa tu telefono de contacto"></ion-input>
+     </ion-item>
+
+     <ion-item>
+       <ion-input formControlName="correo" label="Correo electronico:" type="text" placeholder="Ingresa tu correo electronico"></ion-input>
+     </ion-item>
+
+     <ion-item>
+       <ion-select justify="start" label="Selecciona tu sede: " placeholder="Ingresa tu sede">
+         <ion-select-option value="San Joaquin">San Joaquin</ion-select-option>
+         <ion-select-option value="Alonzo de Ovalle">Alonzo de Ovalle</ion-select-option>
+         <ion-select-option value="Plaza vespucio">Plaza vespucio</ion-select-option>
+         <ion-select-option value="Maipú">Maipú</ion-select-option>
+         <ion-select-option value="Antonio Varas">Antonio Varas</ion-select-option>
+         <ion-select-option value="Melipilla">Melipilla</ion-select-option>
+       </ion-select>
+     </ion-item>
+ 
+     <ion-item>
+       <ion-input label="Fecha de nacimineto:"></ion-input>
+       <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+       <ion-modal [keepContentsMounted]="true">
+         <ng-template>
+           <ion-datetime id="datetime"></ion-datetime>
+         </ng-template>
+       </ion-modal>
+     </ion-item>
+
+ <ion-button (click)="guardar()" color="success" >Registrar</ion-button>
+ <ion-button color="danger">Limpiar</ion-button>
+    </form>
 
 
-  <ion-text class="ion-text-center" color="dark">
-    <h3>Registro Profesor</h3>
-  </ion-text>
-
-  <ion-list color="dark">
-    <ion-list color="dark">
-      <ion-item color="dark">
-        <ion-input label="Nombre:" placeholder="Ingresa tu nombre"></ion-input>
-      </ion-item>
-  
-      <ion-item color="dark">
-        <ion-input label="Apellido:" type="text" placeholder="Ingresa tu apellido"></ion-input>
-      </ion-item>
-
-      <ion-item color="dark">
-        <ion-input label="Fecha de nacimineto:"></ion-input>
-        <ion-datetime-button datetime="datetime"></ion-datetime-button>
-
-        <ion-modal [keepContentsMounted]="true">
-          <ng-template>
-            <ion-datetime id="datetime"></ion-datetime>
-          </ng-template>
-        </ion-modal>
-      </ion-item>
-
-
-      <ion-item color="dark">
-        <ion-select justify="start" label="Selecciona asignatura a impartir: " placeholder="Selecciona asignatura a impartir:">
-          <ion-select-option value="San Joaquin">Desarrollo de aplicaciones  moviles</ion-select-option>
-          <ion-select-option value="Alonzo de Ovalle">Desarrollo de aplicacciones web</ion-select-option>
-          <ion-select-option value="Plaza vespucio">Programacion Básica</ion-select-option>
-          <ion-select-option value="Maipú">Maipú</ion-select-option>
-          <ion-select-option value="Antonio Varas">Antonio Varas</ion-select-option>
-          <ion-select-option value="Melipilla">Melipilla</ion-select-option>
-        </ion-select>
-      </ion-item>
-  
-      <ion-item color="dark">
-        <ion-select justify="start" label="Selecciona tu sede: " placeholder="Ingresa tu sede">
-          <ion-select-option value="San Joaquin">San Joaquin</ion-select-option>
-          <ion-select-option value="Alonzo de Ovalle">Alonzo de Ovalle</ion-select-option>
-          <ion-select-option value="Plaza vespucio">Plaza vespucio</ion-select-option>
-          <ion-select-option value="Maipú">Maipú</ion-select-option>
-          <ion-select-option value="Antonio Varas">Antonio Varas</ion-select-option>
-          <ion-select-option value="Melipilla">Melipilla</ion-select-option>
-        </ion-select>
-      </ion-item>
-  
-    </ion-list>
-  </ion-list>
-
-  <ion-button color="success">Registrar</ion-button>
-  <ion-button color="danger">Limpiar</ion-button>
-  
-</ion-content>
-
-<ion-footer color="warning">
-  <ion-toolbar color="warning">
-    <ion-title>App desarrollada por: Equipo DUOC</ion-title>
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-footer>
+
 
 
 
