@@ -50,6 +50,10 @@ const routes: Routes = [
     path: 'homere',
     loadChildren: () => import('./homere/homere.module').then( m => m.HomerePageModule)
   },
+  {
+    path: 'recuperar-cuenta-code',
+    loadChildren: () => import('./recuperar-cuenta-code/recuperar-cuenta-code.module').then( m => m.RecuperarCuentaCodePageModule)
+  },
 
 ];
 

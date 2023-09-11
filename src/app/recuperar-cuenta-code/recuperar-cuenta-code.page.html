@@ -1,0 +1,34 @@
+<!-- HEADER -->
+<ion-header [translucent]="true" class="ion-text-center" color="warning">
+  <ion-toolbar color="warning">
+    <ion-title size="large">Bienvenido Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- BODY -->
+<ion-content color="dark">
+  <form [formGroup]="formularioRecuperarCuentaCode" color="dark">
+    <ion-item color="dark">
+      <ion-label position="stacked">Ingresa el codigo enviado a tu correo</ion-label>
+      <ion-input
+        formControlName="codigo"
+        placeholder="Ingresa el codigo enviado a tu cuenta"
+        color="success"
+      ></ion-input>
+    </ion-item>
+    <ion-button (click)="cambiarClave()" expand="full" color="success">Ingresar</ion-button>
+  </form>
+</ion-content>
+
+<!-- FOOTER -->
+<ion-footer>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/home">Back</ion-button>
+    </ion-buttons>
+    <ion-title>Seleccionar</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="primary">Help</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
