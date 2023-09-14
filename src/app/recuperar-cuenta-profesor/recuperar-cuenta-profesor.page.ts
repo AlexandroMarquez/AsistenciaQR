@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import{
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder
+} from '@angular/forms';
+
 
 @Component({
   selector: 'app-recuperar-cuenta-profesor',
@@ -7,7 +14,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecuperarCuentaProfesorPage implements OnInit {
 
-  constructor() { }
+  formularioRecuperar_cuenta_profesor: FormGroup; // Confirmar si sirve
+
+  constructor(public fb: FormBuilder) {
+
+    this.formularioRecuperar_cuenta_profesor = this.fb.group({
+      'correo': new FormControl("",Validators.required),
+    })
+
+   }
 
   ngOnInit() {
   }

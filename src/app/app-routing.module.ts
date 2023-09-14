@@ -18,7 +18,8 @@ const routes: Routes = [
   {
     path: 'login-profesor',
     loadChildren: () => import('./login-profesor/login-profesor.module').then( m => m.LoginProfesorPageModule)
-  },  {
+  },
+  {
     path: 'main-profesor',
     loadChildren: () => import('./main-profesor/main-profesor.module').then( m => m.MainProfesorPageModule)
   },
@@ -44,7 +45,7 @@ const routes: Routes = [
   },
   {
     path: 'home2',
-    loadChildren: () => import('./home2/home2.module').then( m => m.Home2PageModule)
+    loadChildren: () => import('./home2/home2.module').then( m => m.Home2PageModule)  
   },
   {
     path: 'homere',

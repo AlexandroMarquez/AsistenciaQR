@@ -7,9 +7,68 @@
 
 <!-- BODY -->
 <ion-content color="dark">
+    <ion-card color="dark">
+
+      <ion-card-header>
+        <ion-card-title>Recuperar cuenta</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+
+        <form [formGroup]="formularioRecuperar_cuenta_profesor">
+          <ion-item color="dark">
+            <ion-label position="floating">Ingresa tu nuevo correo</ion-label>
+            <ion-input formControlName="correo"></ion-input>
+          </ion-item>
+        </form>
+        
+        
+        
+      </ion-card-content>      
+    </ion-card>
+
+</ion-content>
+
+
+<!-- FOOTER -->
+<ion-footer>
+  <ion-toolbar color="warning">
+
+    <ion-buttons slot="start">
+      <ion-button color ="primary" routerLink="/home2">Aceptar</ion-button>
+    </ion-buttons>
+
+    
+
+    <!-- <ion-buttons slot="end">
+      <ion-button color ="primary">Help</ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-content color="dark">
   <ion-list color="dark">  
     <ion-item color="dark">
-      <ion-input
+      <ion-input color="dark"
         label="Ingrese su correo"
         labelPlacement="stacked"
         [clearOnEdit]="true"
@@ -20,22 +79,4 @@
 
     <link rel="stylesheet" routerLink="/main-student"><ion-button color="success">Ingresar</ion-button>
   </ion-list>
-</ion-content>
-
-<!-- FOOTER -->
-<ion-footer>
-  <ion-toolbar color="warning">
-
-    <ion-buttons slot="start">
-      <ion-button color ="primary" routerLink="/home">Back</ion-button>
-    </ion-buttons>
-
-    <ion-title>Seleccionar</ion-title>
-
-    <ion-buttons slot="end">
-      <ion-button color ="primary">Help</ion-button>
-    </ion-buttons>
-
-  </ion-toolbar>
-</ion-footer>
-
+</ion-content> -->
