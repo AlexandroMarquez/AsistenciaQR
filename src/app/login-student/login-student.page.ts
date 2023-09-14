@@ -44,7 +44,7 @@ export class LoginStudentPage implements OnInit {
 
   async ingresar() {
     var varFormularioLogin = this.formularioLoginStudent.value;
-    var user = JSON.parse(localStorage.getItem('usuario') || '{}');
+    var user = JSON.parse(localStorage.getItem('estudiante') || '{}');
     console.log(varFormularioLogin.user);
     console.log(user.usuario);
 
