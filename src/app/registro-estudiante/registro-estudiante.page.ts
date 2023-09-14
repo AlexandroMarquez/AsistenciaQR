@@ -48,7 +48,7 @@ export class RegistroEstudiantePage implements OnInit {
       return;
   }
 
-  var usuario = {
+  var estudiante = {
       usuario: f.usuario,
       contraseña: f.contraseña,
       nombre: f.nombre,
@@ -58,7 +58,12 @@ export class RegistroEstudiantePage implements OnInit {
       correo: f.correo
 
   }
-  localStorage.setItem('usuario', JSON.stringify(usuario));
+  localStorage.setItem('estudiante', JSON.stringify(estudiante));
+  const alert = await this.alertController.create({
+    header: 'Guardado',
+    message: 'Datos guardados correctamente',
+    buttons: ['Aceptar']});    
+    await alert.present();
 }
 
 }

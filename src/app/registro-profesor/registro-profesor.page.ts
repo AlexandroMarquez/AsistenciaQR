@@ -63,7 +63,7 @@ export class RegistroProfesorPage implements OnInit {
       return;
   }
 
-  var usuario = {
+  var profesor = {
       usuario: f.usuario,
       contraseña: f.contraseña,
       nombre: f.nombre,
@@ -74,7 +74,7 @@ export class RegistroProfesorPage implements OnInit {
 
   }
 
-  localStorage.setItem('usuario', JSON.stringify(usuario));
+  localStorage.setItem('profesor', JSON.stringify(profesor));
   const alert = await this.alertController.create({
     header: 'Guardado',
     message: 'Datos guardados correctamente',
