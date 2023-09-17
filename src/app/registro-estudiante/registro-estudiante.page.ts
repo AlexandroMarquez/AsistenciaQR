@@ -65,5 +65,7 @@ export class RegistroEstudiantePage implements OnInit {
     buttons: ['Aceptar']});    
     await alert.present();
 }
-
+    limpiar() {
+  this.formularioRegistroStudent.reset();
+}
 }

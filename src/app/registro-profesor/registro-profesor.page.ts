@@ -81,5 +81,7 @@ export class RegistroProfesorPage implements OnInit {
     buttons: ['Aceptar']});    
     await alert.present();
 }
-
+limpiar() {
+  this.formularioRegistroProfesor.reset();
+}
 }
