@@ -54,7 +54,11 @@ const routes: Routes = [
   {
     path: 'recuperar-cuenta-code',
     loadChildren: () => import('./recuperar-cuenta-code/recuperar-cuenta-code.module').then( m => m.RecuperarCuentaCodePageModule)
+  },  {
+    path: 'recuperar-cuenta-code2',
+    loadChildren: () => import('./recuperar-cuenta-code2/recuperar-cuenta-code2.module').then( m => m.RecuperarCuentaCode2PageModule)
   },
+
 
 ];
 

@@ -9,13 +9,13 @@ import { Router } from '@angular/router'; // Importa Router desde '@angular/rout
 })
 export class RecuperarCuentaCodePage implements OnInit {
 
-  codigoCambiaClave = 'tuCodigoCambiaClave'; // Reemplaza esto con tu código real
+  codigoCambiaClave = 'CambiaClave'; 
 
   formularioRecuperarCuentaCode: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.formularioRecuperarCuentaCode = this.formBuilder.group({
-      codigo: ['', Validators.required] // Definimos el control del código
+      codigo: ['', Validators.required] 
     });
   }
 
@@ -23,16 +23,12 @@ export class RecuperarCuentaCodePage implements OnInit {
   }
 
   cambiarClave() {
-    // Obtener el valor del código ingresado en el formulario de forma segura
     const codigoIngresado = this.formularioRecuperarCuentaCode.get('codigo')?.value;
 
     if (codigoIngresado === this.codigoCambiaClave) {
       console.log('vamos a cambiar la clave');
-      // Código válido
-      // Redirigir a la página que permite editar la clave
-      this.router.navigate(['/home']); // Reemplaza con la ruta correcta
+      this.router.navigate(['/recuperar-cuenta-code2']); 
     } else {
-      // Código no válido
       console.log('Código incorrecto');
     }
   }

@@ -7,16 +7,16 @@
 
 <!-- BODY -->
 <ion-content color="dark">
-  <form [formGroup]="formularioRecuperarCuentaCode" color="dark">
+  <form [formGroup]="formularioNewPass" color="dark">
     <ion-item color="dark">
-      <ion-label position="stacked">Ingrese el codigo enviado a su correo</ion-label>
+      <ion-label position="stacked">Ingrese su nueva Contraseña</ion-label>
       <ion-input
-        formControlName="codigo"
-        placeholder="Ingrese el codigo para poder cambiar su contraseña"
+        formControlName="newpassword"
+        placeholder="Proporcione una contraseña segura"
         color="success"
       ></ion-input>
     </ion-item>
-    <ion-button (click)="cambiarClave()" expand="full" color="success">Ingresar</ion-button>
+    <ion-button expand="full" color="success">Cambiar Contraseña</ion-button>
   </form>
 </ion-content>
 
