@@ -1,22 +1,22 @@
 <!-- HEADER -->
 <ion-header [translucent]="true" class="ion-text-center" color="warning">
   <ion-toolbar color="warning">
-    <ion-title size="large">Bienvenido Profesor</ion-title>
+    <ion-title size="large">Bienvenido Alumno</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <!-- BODY -->
 <ion-content color="dark">
-  <form [formGroup]="formularioNewPass" color="dark">
+  <form [formGroup]="formularioRecuperarCuentaCodeEst" color="dark">
     <ion-item color="dark">
-      <ion-label position="stacked">Ingrese su nueva Contraseña</ion-label>
+      <ion-label position="stacked">Ingrese el codigo enviado a su correo</ion-label>
       <ion-input
-        formControlName="newpassword"
-        placeholder="Proporcione una contraseña segura"
+        formControlName="codigo"
+        placeholder="Ingrese el codigo para poder cambiar su contraseña"
         color="success"
       ></ion-input>
     </ion-item>
-    <ion-button (click)="cambiarPass()"  expand="full" color="success">Cambiar Contraseña</ion-button>
+    <ion-button (click)="cambiarClave()" expand="full" color="success">Ingresar</ion-button>
   </form>
 </ion-content>
 

@@ -58,6 +58,14 @@ const routes: Routes = [
     path: 'recuperar-cuenta-code2',
     loadChildren: () => import('./recuperar-cuenta-code2/recuperar-cuenta-code2.module').then( m => m.RecuperarCuentaCode2PageModule)
   },
+  {
+    path: 'recuperar-cuenta-code-est',
+    loadChildren: () => import('./recuperar-cuenta-code-est/recuperar-cuenta-code-est.module').then( m => m.RecuperarCuentaCodeEstPageModule)
+  },
+  {
+    path: 'recuperar-cuenta-code-est2',
+    loadChildren: () => import('./recuperar-cuenta-code-est2/recuperar-cuenta-code-est2.module').then( m => m.RecuperarCuentaCodeEst2PageModule)
+  },
 
 
 ];
