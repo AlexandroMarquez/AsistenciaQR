@@ -11,8 +11,8 @@ import { RecuperarCuentaCodeEstPage } from './recuperar-cuenta-code-est.page';
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule, // Agrega FormsModule si es necesario
-    ReactiveFormsModule, // Añade ReactiveFormsModule aquí para resolver el error
+    FormsModule, 
+    ReactiveFormsModule,
     IonicModule,
     RecuperarCuentaCodeEstPageRoutingModule
   ],

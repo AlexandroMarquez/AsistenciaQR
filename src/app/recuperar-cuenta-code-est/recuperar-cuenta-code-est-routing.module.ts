@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { RecuperarCuentaCodeEstPage } from './recuperar-cuenta-code-est.page';
 
 const routes: Routes = [
   {
-    path: 'RecuperarCuentaCodeEst',
+    path: 'recuperar-cuenta-code-est', // Ruta en minúsculas y con guiones
     component: RecuperarCuentaCodeEstPage
   }
 ];

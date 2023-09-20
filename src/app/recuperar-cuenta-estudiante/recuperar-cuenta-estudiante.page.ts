@@ -56,7 +56,7 @@ export class RecuperarCuentaEstudiantePage implements OnInit {
 
       if (estudiante.correo === f.mail) {
         console.log('El correo ingresado coincide con el correo almacenado en el Local Storage.');
-        this.router.navigate(['/RecuperarCuentaCodeEst']); 
+        this.router.navigate(['/home']); 
       } else {
         console.log('El correo ingresado no coincide con el correo almacenado en el Local Storage.');
         // Realiza aquí la acción que desees cuando no coincidan
