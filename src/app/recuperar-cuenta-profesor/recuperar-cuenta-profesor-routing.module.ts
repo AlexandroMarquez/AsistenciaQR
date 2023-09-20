@@ -9,7 +9,7 @@ const routes: Routes = [
     component: RecuperarCuentaProfesorPage
   },
   {
-    path: 'RecuperarCuentaCode', // Esta es la ruta para RecuperarCuentaCodePage
+    path: 'RecuperarCuentaCode', 
     component: RecuperarCuentaCodePage
   }
 ];
