@@ -1,23 +1,36 @@
 <!-- HEADER -->
-<ion-header [translucent]="true" class="ion-text-center" color="warning">
+<ion-header class="ion-text-center" color="warning">
   <ion-toolbar color="warning">
-    <ion-title size="large">Bienvenido Profesor</ion-title>
+    <ion-title size="large">Recuperar cuenta por codigo</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <!-- BODY -->
-<ion-content color="dark">
-  <form [formGroup]="formularioRecuperarCuentaCode" color="dark">
-    <ion-item color="dark">
-      <ion-label position="stacked">Ingrese el codigo enviado a su correo</ion-label>
-      <ion-input
-        formControlName="codigo"
-        placeholder="Ingrese el codigo para poder cambiar su contraseña"
-        color="success"
-      ></ion-input>
-    </ion-item>
-    <ion-button (click)="cambiarClave()" expand="full" color="success">Ingresar</ion-button>
-  </form>
+<ion-content [fullscreen]="true" color="dark" >
+
+  <ion-card>
+    <ion-card-header color="dark">
+      <ion-title>Codigo </ion-title>
+    </ion-card-header>
+
+    <img alt="Silhouette of mountains" src="assets/icon/candado.png" />
+
+    <ion-card-content>
+      <form [formGroup]="formularioRecuperarCuentaCode" >
+        <ion-item color="light">
+          <ion-label position="stacked">Ingrese el codigo enviado a su correo</ion-label>
+          <ion-input
+            formControlName="codigo"
+            placeholder="Ingrese el codigo para poder cambiar su contraseña"
+            
+          ></ion-input>
+        </ion-item>
+        <ion-button (click)="cambiarClave()" expand="full" color="success">Ingresar</ion-button>
+      </form>
+    </ion-card-content>
+
+  </ion-card>
+ 
 </ion-content>
 
 <!-- FOOTER -->
@@ -26,9 +39,30 @@
     <ion-buttons slot="start">
       <ion-button color="primary" routerLink="/home">Back</ion-button>
     </ion-buttons>
-    <ion-title>Seleccionar</ion-title>
+    
     <ion-buttons slot="end">
       <ion-button color="primary">Help</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <ion-card >
+    
+  </ion-card> -->

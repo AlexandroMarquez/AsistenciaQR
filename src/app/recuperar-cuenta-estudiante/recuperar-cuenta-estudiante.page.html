@@ -6,9 +6,65 @@
 </ion-header>
 
 <!-- BODY --> 
-<ion-content color="dark">
+
+<ion-content color="dark" class="ion-text-center">
+  <ion-card>
+    <ion-card-header color="dark">
+      <ion-card-title>Recupera Tu cuenta</ion-card-title>
+    </ion-card-header>
+
+    <img alt="Silhouette of mountains" src="assets/icon/enviando.png" />
+
+    <ion-card-content color="light">
+      <form [formGroup]="formularioRecuperarCuenta" color="dark">  
+        <ion-item color="light">
+          <ion-input        
+            formControlName="mail"
+            label="Ingresa tu correo"
+            labelPlacement="stacked"
+            [clearOnEdit]="true"
+            placeholder="Ingresa correo asociado a tu cuenta"
+            color="dark"
+          >
+          </ion-input>
+        </ion-item>
+        <ion-button (click)="enviarMail()" color="success"><a routerLink="/RecuperarCuentaCode">Ingresar</a></ion-button>
+      </form>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
+
+<!-- FOOTER -->
+<ion-footer>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-button color ="primary" routerLink="/home">Back</ion-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-button color ="primary">Help</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-content color="dark">
+  <ion-card>
   <form [formGroup]="formularioRecuperarCuenta" color="dark">  
-    <ion-item color="dark">
+    <ion-item >
       <ion-input        
         formControlName="mail"
         label="Ingresa tu correo"
@@ -21,17 +77,5 @@
     </ion-item>
     <ion-button (click)="enviarMail()" color="success">Ingresar</ion-button>
   </form>
-</ion-content>
-
-<!-- FOOTER -->
-<ion-footer>
-  <ion-toolbar color="warning">
-    <ion-buttons slot="start">
-      <ion-button color ="primary" routerLink="/home">Back</ion-button>
-    </ion-buttons>
-    <ion-title>Seleccionar</ion-title>
-    <ion-buttons slot="end">
-      <ion-button color ="primary">Help</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>
+</ion-card>
+</ion-content> -->

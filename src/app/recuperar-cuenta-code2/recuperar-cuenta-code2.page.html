@@ -7,8 +7,9 @@
 
 <!-- BODY -->
 <ion-content color="dark">
-  <form [formGroup]="formularioNewPass" color="dark">
-    <ion-item color="dark">
+  <ion-card>
+  <form [formGroup]="formularioNewPass">
+    <ion-item color="light">
       <ion-label position="stacked">Ingrese su nueva Contraseña</ion-label>
       <ion-input
         formControlName="newpassword"
@@ -18,6 +19,7 @@
     </ion-item>
     <ion-button expand="full" color="success">Cambiar Contraseña</ion-button>
   </form>
+</ion-card>
 </ion-content>
 
 <!-- FOOTER -->

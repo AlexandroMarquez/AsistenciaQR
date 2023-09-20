@@ -9,16 +9,24 @@
 </ion-header>
 
 <!-- BODY -->
+
 <ion-content [fullscreen]="true" color="dark" class="ion-text-center">
-  <ion-toolbar color="dark">
-    <ion-title size="large">Bienvenido a EasyCheck</ion-title>
-  </ion-toolbar>
+  <ion-card>
+    <ion-card-header color="dark">
+      <ion-card-title>Bienvenido a Easy Check</ion-card-title>
+    </ion-card-header>
+
+    <img alt="Silhouette of mountains" src="assets/icon/universidad.png" />
+
+    <ion-button expand="block" routerLink="/home2">Ingresa</ion-button> 
+    <!-- Agregar alerta guardado exitosamente -->
+    <ion-button expand="block"  routerLink="/homere">Registrate</ion-button>
+
+  </ion-card>
 </ion-content>
 
 <div color="dark">
-  <ion-button expand="block" routerLink="/home2">Ingresa</ion-button> 
-  <!-- Agregar alerta guardado exitosamente -->
-  <ion-button expand="block"  routerLink="/homere">Registrate</ion-button>
+  
 </div>
 
 <!-- FOOTER -->

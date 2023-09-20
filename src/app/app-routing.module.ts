@@ -58,6 +58,10 @@ const routes: Routes = [
     path: 'recuperar-cuenta-code2',
     loadChildren: () => import('./recuperar-cuenta-code2/recuperar-cuenta-code2.module').then( m => m.RecuperarCuentaCode2PageModule)
   },
+  {
+    path: 'animacion',
+    loadChildren: () => import('./animacion/animacion.module').then( m => m.AnimacionPageModule)
+  },
 
 
 ];

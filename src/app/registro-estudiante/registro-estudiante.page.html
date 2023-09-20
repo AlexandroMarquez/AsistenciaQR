@@ -4,37 +4,39 @@
   </ion-toolbar>
 </ion-header>
 
-<form [formGroup]="formularioRegistroStudent" color="dark">
+<ion-content color="dark">
+<ion-card color="light">
+  <form [formGroup]="formularioRegistroStudent" color="dark">
 
-  <ion-item color="dark">
+  <ion-item color="light">
        <ion-input formControlName="usuario" label="Usuario:" placeholder="Ingresa el nombre de usuario que deseas utilizar"></ion-input>
      </ion-item>
 
-     <ion-item color="dark">
+     <ion-item color="light">
        <ion-input formControlName="contraseña" label="Contraseña:" placeholder="Ingresa tu contraseña" type="password"></ion-input>
      </ion-item>
 
-     <ion-item color="dark">
+     <ion-item color="light">
        <ion-input formControlName="nombre" label="Nombre:" placeholder="Ingresa tu nombre"></ion-input>
      </ion-item>
  
-     <ion-item color="dark">
+     <ion-item color="light">
        <ion-input formControlName="apellido" label="Apellido:" type="text" placeholder="Ingresa tu apellido"></ion-input>
      </ion-item>
 
-     <ion-item color="dark">
+     <ion-item color="light">
        <ion-input formControlName="rut" label="Rut:" type="text" placeholder="Ingresa tu rut"></ion-input>
      </ion-item>
 
-     <ion-item color="dark">
+     <ion-item color="light">
        <ion-input formControlName="telefono" label="Telefono de contacto:" type="text" placeholder="Ingresa tu telefono de contacto"></ion-input>
      </ion-item>
 
-     <ion-item color="dark">
+     <ion-item color="light">
        <ion-input formControlName="correo" label="Correo electronico:" type="text" placeholder="Ingresa tu correo electronico"></ion-input>
      </ion-item>
 
-     <ion-item color="dark">
+     <ion-item color="light">
        <ion-select justify="start" label="Selecciona tu sede: " placeholder="Ingresa tu sede">
          <ion-select-option value="San Joaquin">San Joaquin</ion-select-option>
          <ion-select-option value="Alonzo de Ovalle">Alonzo de Ovalle</ion-select-option>
@@ -45,7 +47,7 @@
        </ion-select>
      </ion-item>
  
-     <ion-item color="dark">
+     <ion-item color="light">
        <ion-input label="Fecha de nacimineto:"></ion-input>
        <ion-datetime-button datetime="datetime"></ion-datetime-button>
 
@@ -54,16 +56,23 @@
            <ion-datetime id="datetime"></ion-datetime>
          </ng-template>
        </ion-modal>
-     </ion-item>
-
- <ion-button (click)="guardar()" color="success" >Registrar</ion-button>
- <ion-button (click)="limpiar()" color="danger">Limpiar</ion-button>
-    </form>
-
+  </ion-item>
+    
+      <ion-button (click)="guardar()" color="success" >Registrar</ion-button>
+      <ion-button (click)="limpiar()" color="danger">Limpiar</ion-button>
+    
+  </form>
+</ion-card>
+</ion-content>
 
 <ion-footer>
-  <ion-toolbar color="light">
-    <ion-title></ion-title>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-button color ="primary" routerLink="/home">Back</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color ="primary">Help</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-footer>
 

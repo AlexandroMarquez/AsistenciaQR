@@ -8,37 +8,43 @@
 
 <!-- BODY -->
 <ion-content color="dark">
-  <form [formGroup]="formularioLoginStudent" color="dark">  
-    <ion-item color="dark">
-      <ion-input
-        id="inputUsuario"
-        formControlName="user"
-        label="Usuario"
-        labelPlacement="stacked"
-        [clearOnEdit]="true"
-        placeholder="Ingresa un usuario valido"
-      >
-      </ion-input>
-    </ion-item>
+  <ion-card>
 
-    <ion-item color="dark">
-      <ion-input
-        id="inputContraseña"
-        formControlName="password"
-        label="Contraseña"
-        labelPlacement="stacked"
-        type="password"
-        placeholder="Ingresa contraseña"
-      >
-      </ion-input>
-    </ion-item>
+    <img alt="Silhouette of mountains" src="https://cdn-icons-png.flaticon.com/512/1651/1651639.png"/>
 
-    <link rel="stylesheet"><ion-button (click)="ingresar()" color="success">Ingresar</ion-button>
+    <form [formGroup]="formularioLoginStudent" color="light">  
+      <ion-item color="light" >
+        <ion-input
+          id="inputUsuario"
+          formControlName="user"
+          label="Usuario"
+          labelPlacement="stacked"
+          [clearOnEdit]="true"
+          placeholder="Ingresa un usuario valido"
+        >
+        </ion-input>
+      </ion-item>
 
-    <ion-text color ="primary" class="ion-margin-top">
-      <h6 routerLink="/recuperar-cuenta-estudiante">Recupera tu cuenta</h6>
-    </ion-text>
-  </form>
+      <ion-item color="light">
+        <ion-input
+          id="inputContraseña"
+          formControlName="password"
+          label="Contraseña"
+          labelPlacement="stacked"
+          type="password"
+          placeholder="Ingresa contraseña"
+        >
+        </ion-input>
+      </ion-item>
+      
+      <link rel="stylesheet"><ion-button (click)="ingresar()" color="success">Ingresar</ion-button>
+
+      <ion-text color ="primary" class="ion-margin-top">
+        <h6 routerLink="/recuperar-cuenta-estudiante">Recupera tu cuenta</h6>
+      </ion-text>
+    </form>
+
+  </ion-card>
 </ion-content>
 
 
@@ -48,7 +54,7 @@
     <ion-buttons slot="start">
       <ion-button color ="primary" routerLink="/home">Back</ion-button>
     </ion-buttons>
-    <ion-title>Seleccionar</ion-title>
+    
     <ion-buttons slot="end">
       <ion-button color ="primary">Help</ion-button>
     </ion-buttons>

@@ -22,6 +22,8 @@ import {
 } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 
+
+
 @Component({
   selector: 'app-registro-profesor',
   templateUrl: './registro-profesor.page.html',
@@ -85,3 +87,4 @@ limpiar() {
   this.formularioRegistroProfesor.reset();
 }
 }
+

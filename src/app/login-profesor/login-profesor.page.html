@@ -8,9 +8,13 @@
 
 <!-- BODY -->
 <ion-content color="dark">
+  <ion-card>
+
+    <img alt="Silhouette of mountains" src="assets/icon/profesor.png"/>
+
   <form [formGroup]="formularioLoginProfesor" color="dark">  
-    <ion-item color="dark">
-      <ion-input color="dark"
+    <ion-item color="light">
+      <ion-input 
         id="inputUsuario"
         formControlName="user"
         label="Usuario"
@@ -21,8 +25,8 @@
       </ion-input>
     </ion-item>
 
-    <ion-item color="dark">
-      <ion-input color="dark"
+    <ion-item color="light" >
+      <ion-input 
         id="inputContraseña"
         formControlName="password"
         label="Contraseña"
@@ -39,6 +43,7 @@
       <h6 routerLink="/recuperar-cuenta-profesor">Recupera tu cuenta</h6>
     </ion-text>
   </form>
+</ion-card>
 </ion-content>
 
 

@@ -1,13 +1,15 @@
-<ion-header [translucent]="true" color="warning" >
+<ion-header  color="warning" >
   <ion-toolbar color="warning">
     <ion-title>EasyCheck</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<form [formGroup]="formularioRegistroProfesor" color="dark">
+<ion-content color="dark">
+  <ion-card>
+    <form [formGroup]="formularioRegistroProfesor">
 
-  <ion-item>
-       <ion-input formControlName="usuario" label="Usuario:" placeholder="Ingresa el nombre de usuario que deseas utilizar"></ion-input>
+      <ion-item>
+        <ion-input formControlName="usuario" label="Usuario:" placeholder="Ingresa el nombre de usuario que deseas utilizar"></ion-input>
      </ion-item>
 
      <ion-item>
@@ -44,30 +46,41 @@
          <ion-select-option value="Melipilla">Melipilla</ion-select-option>
        </ion-select>
      </ion-item>
+
+     <ion-item>
+      <ion-select justify="start" label="Selecciona tu escuela: " placeholder="Ingresa tu escuela">
+        <ion-select-option value="ing.Mecánica">Ing.Mecánica</ion-select-option>
+        <ion-select-option value="ing.Informática">Ing.Informática</ion-select-option>
+        <ion-select-option value="ing.Electronica">Ing.Electronica</ion-select-option>
+        
+      </ion-select>
+    </ion-item>
  
      <ion-item>
        <ion-input label="Fecha de nacimineto:"></ion-input>
        <ion-datetime-button datetime="datetime"></ion-datetime-button>
 
-       <ion-modal [keepContentsMounted]="true">
-         <ng-template>
-           <ion-datetime id="datetime"></ion-datetime>
-         </ng-template>
-       </ion-modal>
-     </ion-item>
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime id="datetime"></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </ion-item>
 
- <ion-button (click)="guardar()" color="success" >Registrar</ion-button>
- <ion-button (click)="limpiar()"  color="danger">Limpiar</ion-button>
-    </form>
+  <ion-button (click)="guardar()" color="success" >Registrar</ion-button>
+  <ion-button (click)="limpiar()"  color="danger">Limpiar</ion-button>
+</form>
+</ion-card>
+</ion-content>
 
 
 <ion-footer>
-  <ion-toolbar color="light">
-    <ion-title></ion-title>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-button color ="primary" routerLink="/home">Back</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color ="primary">Help</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-footer>
-
-
-
-
-

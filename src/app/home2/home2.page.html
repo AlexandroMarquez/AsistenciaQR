@@ -9,18 +9,30 @@
 
 <!-- BODY -->
 <ion-content [fullscreen]="true" color="dark" class="ion-text-center">
-    <ion-toolbar color="dark">
-      <ion-title size="large">Ingresa a nuestra APP</ion-title>
-    </ion-toolbar>
+    <ion-card>
+      <ion-card-header color="dark">
+        <ion-card-title>Ingresa a Easy Check</ion-card-title>
+      </ion-card-header>
+
+      <img alt="Silhouette of mountains" src="assets/icon/acceso.png" />
+
+      <ion-button expand="block" routerLink="/login-student">Estudiante</ion-button> 
+  <ion-button expand="block"  routerLink="/login-profesor">Profesor</ion-button>
+
+    </ion-card>
 </ion-content>
 
-<div color="dark">
-  <ion-button expand="block" routerLink="/login-student">Estudiante</ion-button> 
-  <ion-button expand="block"  routerLink="/login-profesor">Profesor</ion-button>
-</div>
-
+<!-- FOOTER -->
 <ion-footer>
   <ion-toolbar color="warning">
-    <ion-title>App desarrollada por: Equipo DUOC</ion-title>
+    <ion-toolbar color="warning">
+      <ion-buttons slot="start">
+        <ion-button color ="primary" routerLink="/home">Back</ion-button>
+      </ion-buttons>
+      
+      <ion-buttons slot="end">
+        <ion-button color ="primary">Help</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
   </ion-toolbar>
 </ion-footer>
