@@ -61,7 +61,7 @@ export class RecuperarCuentaProfesorPage implements OnInit {
         
       } else {
         console.log('El correo ingresado no coincide con el correo almacenado en el Local Storage.');
-        // Realiza aquí la acción que desees cuando no coincidan
+        
       }
     } catch (error) {
       console.error('Error al analizar el objeto estudiante del Local Storage:', error);
