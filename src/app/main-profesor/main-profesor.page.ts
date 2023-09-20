@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-profesor.page.scss'],
 })
 export class MainProfesorPage implements OnInit {
+  profesor: any; 
 
   constructor() { }
 
   ngOnInit() {
-  }
+    const profesorString = localStorage.getItem('profesor');
 
+    if (profesorString) {
+      this.profesor = JSON.parse(profesorString);
+    }
+  }
 }
