@@ -5,11 +5,15 @@ describe('RecuperarCuentaCodePage', () => {
   let component: RecuperarCuentaCodePage;
   let fixture: ComponentFixture<RecuperarCuentaCodePage>;
 
-  beforeEach(async(() => {
+  beforeEach(async () => {
+    fixture = await TestBed.configureTestingModule({
+      declarations: [RecuperarCuentaCodePage],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(RecuperarCuentaCodePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
