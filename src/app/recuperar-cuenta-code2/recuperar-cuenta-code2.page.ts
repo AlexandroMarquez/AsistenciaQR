@@ -38,7 +38,6 @@ export class RecuperarCuentaCode2Page implements OnInit {
       // Redirige a la página de inicio u otra página según tus necesidades
       this.router.navigate(['/home']);
     } else {
-      // Maneja el caso en el que 'profesorEnLocalStorageString' sea nulo
       console.log('No se encontró un objeto de profesor en el localStorage');
     }
   }

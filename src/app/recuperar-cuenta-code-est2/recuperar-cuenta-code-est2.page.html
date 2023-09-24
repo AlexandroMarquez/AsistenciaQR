@@ -1,13 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>recuperarCuentaCodeEst2</ion-title>
+<!-- HEADER -->
+<ion-header [translucent]="true" class="ion-text-center" color="warning">
+  <ion-toolbar color="warning">
+    <ion-title size="large">Bienvenido Alumno</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">recuperarCuentaCodeEst2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!-- BODY -->
+<ion-content color="dark">
+  <ion-card>
+  <form [formGroup]="formularioNewPass">
+    <ion-item color="light">
+      <ion-label position="stacked">Ingrese su nueva Contraseña</ion-label>
+      <ion-input
+        formControlName="newpassword"
+        placeholder="Proporcione una contraseña segura"
+        color="success"
+      ></ion-input>
+    </ion-item>
+    <ion-button (click)="cambiarPass()"  expand="full" color="success">Cambiar Contraseña</ion-button>
+  </form>
+</ion-card>
 </ion-content>
+
+<!-- FOOTER -->
+<ion-footer>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/home">Back</ion-button>
+    </ion-buttons>
+    <ion-title>Seleccionar</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="primary">Help</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

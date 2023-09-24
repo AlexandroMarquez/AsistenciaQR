@@ -1,12 +1,12 @@
 <!-- HEADER -->
-<ion-header [translucent]="true" class="ion-text-center" color="warning">
+<!-- <ion-header [translucent]="true" class="ion-text-center" color="warning">
   <ion-toolbar color="warning">
     <ion-title size="large">Bienvenido Alumno</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<!-- BODY -->
-<ion-content color="dark">
+ BODY -->
+<!-- <ion-content color="dark">
   <form [formGroup]="formularioRecuperarCuentaCodeEst" color="dark">
     <ion-item color="dark">
       <ion-label position="stacked">Ingrese el codigo enviado a su correo</ion-label>
@@ -18,10 +18,10 @@
     </ion-item>
     <ion-button (click)="cambiarClave()" expand="full" color="success">Ingresar</ion-button>
   </form>
-</ion-content>
+</ion-content> -->
 
 <!-- FOOTER -->
-<ion-footer>
+<!-- <ion-footer>
   <ion-toolbar color="warning">
     <ion-buttons slot="start">
       <ion-button color="primary" routerLink="/home">Back</ion-button>
@@ -31,4 +31,56 @@
       <ion-button color="primary">Help</ion-button>
     </ion-buttons>
   </ion-toolbar>
+</ion-footer> --> 
+
+
+<!-- HEADER -->
+<ion-header class="ion-text-center" color="warning">
+  <ion-toolbar color="warning">
+    <ion-title size="large">Recuperar cuenta por codigo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- BODY -->
+<ion-content [fullscreen]="true" color="dark" >
+
+  <ion-card>
+    <ion-card-header color="dark">
+      <ion-title>Codigo </ion-title>
+    </ion-card-header>
+
+    <img alt="Silhouette of mountains" src="assets/icon/candado.png" />
+
+    <ion-card-content>
+      <form [formGroup]="formularioRecuperarCuentaCodeEst" >
+        <ion-item color="light">
+          <ion-label position="stacked">Ingrese el codigo enviado a su correo</ion-label>
+          <ion-input
+            formControlName="codigo"
+            placeholder="Ingrese el codigo para poder cambiar su contraseña"
+            
+          ></ion-input>
+        </ion-item>
+        <ion-button (click)="cambiarClave()" expand="full" color="success">Ingresar</ion-button>
+      </form>
+    </ion-card-content>
+
+  </ion-card>
+ 
+</ion-content>
+
+<!-- FOOTER -->
+<ion-footer>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/home">Back</ion-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-button color="primary">Help</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-footer>
+
+
+
