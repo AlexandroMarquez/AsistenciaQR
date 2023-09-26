@@ -2,7 +2,7 @@ import { Component, OnInit, ElementRef, ViewChildren } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import type { QueryList } from '@angular/core';
-import { Animation, AnimationController, IonCard } from '@ionic/angular'; // Importa Animation y AnimationController desde '@ionic/angular'
+import { Animation, AnimationController, IonCard } from '@ionic/angular'; 
 
 @Component({
   selector: 'app-recuperar-cuenta-code',
@@ -32,7 +32,6 @@ export class RecuperarCuentaCodePage implements OnInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    // Verificar si hay elementos en cardElements antes de continuar
     if (this.cardElements && this.cardElements.length > 0) {
       const firstCard = this.cardElements.first.nativeElement;
 

@@ -30,15 +30,10 @@ export class LoginStudentPage implements OnInit {
   }
 
   ngAfterViewInit() {
-    // Escuchar los cambios en los controles del formulario
     this.formularioLoginStudent.get('user')?.valueChanges.subscribe(userValue => {
-      // Realizar acciones cuando cambie el valor de 'user'
-      // Puedes acceder a 'userValue' aquí
     });
 
     this.formularioLoginStudent.get('password')?.valueChanges.subscribe(passwordValue => {
-      // Realizar acciones cuando cambie el valor de 'password'
-      // Puedes acceder a 'passwordValue' aquí
     });
   }
 

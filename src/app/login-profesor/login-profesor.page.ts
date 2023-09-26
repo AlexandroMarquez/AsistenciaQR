@@ -30,15 +30,10 @@ export class LoginProfesorPage implements OnInit {
   }
 
   ngAfterViewInit() {
-    // Escuchar los cambios en los controles del formulario
     this.formularioLoginProfesor.get('user')?.valueChanges.subscribe(userValue => {
-      // Realizar acciones cuando cambie el valor de 'user'
-      // Puedes acceder a 'userValue' aquí
     });
 
     this.formularioLoginProfesor.get('password')?.valueChanges.subscribe(passwordValue => {
-      // Realizar acciones cuando cambie el valor de 'password'
-      // Puedes acceder a 'passwordValue' aquí
     });
   }
 

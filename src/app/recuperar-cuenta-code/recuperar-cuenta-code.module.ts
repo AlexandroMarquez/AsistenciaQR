@@ -9,7 +9,7 @@ import { RecuperarCuentaCodePage } from './recuperar-cuenta-code.page';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule, // Agrega ReactiveFormsModule aquí
+    ReactiveFormsModule, 
     IonicModule,
     RecuperarCuentaCodePageRoutingModule
   ],
